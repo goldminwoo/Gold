@@ -1,0 +1,6 @@
+*/.git/*
+.deployables
+.git
+/classes/
+/test-classes/
+.classpath
