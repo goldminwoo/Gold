@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.treefunding.vo.PhotoVo" alias="p" />
+		<typeAlias type="com.treefunding.vo.MemberVO"
+			alias="MemberVO" />
+		<typeAlias type="com.treefunding.vo.EmailVO" alias="EmailVO" />
+		<typeAlias type="com.treefunding.vo.BoardVO" alias="BoardVO" />
+		<typeAlias type="com.treefunding.vo.ReplyVO" alias="ReplyVO" />
+		<typeAlias type="com.treefunding.vo.InvestmentVO"
+			alias="InvestmentVO" />
+		<typeAlias type="com.treefunding.vo.InvestmentItemVO"
+			alias="InvestmentItemVO" />
+		<typeAlias type="com.treefunding.vo.InvestmentMainImageVO"
+			alias="InvestmentMainImageVO" />
+		<typeAlias type="com.treefunding.vo.InvestmentStoryVO"
+			alias="InvestmentStoryVO" />
+		<typeAlias type="com.treefunding.vo.InvestmentQuesionVO"
+			alias="InvestmentQuesionVO" />
+		<typeAlias type="com.treefunding.vo.RewardVO"
+			alias="RewardVO" />
+		<typeAlias type="com.treefunding.vo.RewardItemVO"
+			alias="RewardItemVO" />
+		<typeAlias type="com.treefunding.vo.RewardMainImageVO"
+			alias="RewardMainImageVO" />
+		<typeAlias type="com.treefunding.vo.RewardStoryVO"
+			alias="RewardStoryVO" />
+		<typeAlias type="com.treefunding.vo.RewardQuesionVO"
+			alias="RewardQuesionVO" />
+		<typeAlias
+			type="com.treefunding.vo.MemberInvestmentFundingVO"
+			alias="MemberInvestmentFundingVO" />
+		<typeAlias type="com.treefunding.vo.MemberRewardFundingVO"
+			alias="MemberRewardFundingVO" />
+		<typeAlias type="com.treefunding.vo.AdminAccountVO"
+			alias="AdminAccountVO" />
+		<typeAlias type="com.treefunding.vo.CreditVO"
+			alias="CreditVO" />
+	</typeAliases>
+</configuration>
+
+

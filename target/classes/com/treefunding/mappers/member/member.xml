@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Member">
+
+	<!-- 관리자계정 검색 -->
+	<select id="getAdminAccount" resultType="AdminAccountVO">
+		select * from ADMIN_ACCOUNT where id = #{id}
+	</select>
+
+	<!-- 중복아이디 검색 -->
+	<select id="idCheck" parameterType="java.lang.String"
+		resultType="MemberVO">
+		select * from MEMBER where id = #{id}
+	</select>
+
+	<!-- id로 회원 검색(마지막 레코드 행만 반환) -->
+	<select id="gj" resultType="RewardVO">
+		select * from (select * from REWARD
+		where id=#{id}) where ROWNUM=1
+	</select>
+
+	<!-- 아이디찾기 -->
+	<select id="getFindId" resultType="MemberVO">
+		select * from MEMBER
+		where name
+		= #{name}
+		AND email1 = #{email1}
+		AND email2 = #{email2}
+	</select>
+
+	<!-- 비번찾기 -->
+	<select id="getFindPassword" resultType="MemberVO">
+		select * from MEMBER
+		where id = #{id}
+		AND email1 = #{email1}
+		AND email2 = #{email2}
+	</select>
+
+	<!-- 회원저장 -->
+	<insert id="insert" parameterType="MemberVO">
+		insert into MEMBER (no, name,
+		id,
+		password, email1, email2,
+		phone1, phone2, phone3, address1,
+		address2,
+		businessType, onerName, businessLicense,
+		companyName, credit,
+		joinDate,
+		loginDate, blockDate,
+		activeStatus, reportCount
+		)
+		values(MEMBER_SEQ.NEXTVAL,#{name},#{id},#{password},
+		#{email1},#{email2},#{phone1},#{phone2},#{phone3},
+		#{address1},#{address2},#{businessType},#{onerName},
+		#{businessLicense},#{companyName},#{credit}, sysdate,
+		sysdate, null,
+		'활성', #{reportCount})
+	</insert>
+
+	<!-- 이메일 등록 확인 -->
+	<select id="emailCodeSelect" resultType="EmailVO">
+		select * from
+		EMAIL_CODE_CHECK where email1 = #{email1}
+		AND email2 = #{email2}
+	</select>
+
+	<!-- 인증코드 확인 -->
+	<select id="emailCodeCheck" resultType="EmailVO">
+		select * from
+		EMAIL_CODE_CHECK where email1 = #{email1}
+		AND email2 = #{email2}
+		AND
+		emailCode = #{emailCode}
+	</select>
+
+	<!-- 이메일 등록 -->
+	<insert id="emailCodeInsert">
+		insert into EMAIL_CODE_CHECK (email1, email2,
+		emailCode)
+		values(#{email1},#{email2},#{emailCode})
+	</insert>
+
+	<!-- 이메일 확인 코드 재등록 -->
+	<update id="emailCodeUpdate">
+		update EMAIL_CODE_CHECK set emailCode = #{emailCode}
+		where email1 = #{email1}
+		AND email2 = #{email2}
+	</update>
+
+	<!-- 로그인 검증 -->
+	<select id="loginSelect" resultType="MemberVO">
+		select * from MEMBER
+		where id
+		= #{id}
+		AND password = #{password}
+		AND businessType =
+		#{businessType}
+	</select>
+
+
+	<!-- 관리자 비밀번호 변경 -->
+	<update id="updateAdminPassword">
+		update ADMIN_ACCOUNT
+		set password = #{password}
+		where id = #{id}
+	</update>
+	
+	<!-- 로그인 날짜 수정 -->
+	<update id="loginDateUpdate">
+		update MEMBER
+		set loginDate = sysdate
+		where id = #{id}
+	</update>
+
+	<!-- block_date 업데이트 -->
+	<update id="blockDateUpdate">
+		update MEMBER
+		set activeStatus = '활성', blockDate =
+		null
+		where id = #{id}
+	</update>
+
+	<!-- 전체회원정보 조회 -->
+	<select id="memberList" resultType="MemberVO">
+		select * from
+		(select rowNum rNum, no, id, name, phone1,
+		phone2, phone3,
+		businessType, joinDate, loginDate, activeStatus,
+		reportCount
+		from
+		(select * from MEMBER
+		order by no))
+		where rNum &gt;= #{startRow} and
+		rNum &lt;=
+		#{endRow}
+		<!-- &gt;은 ~보다 크다(>),&lt;은 ~보다 작다(<),rowNum 컬럼은 오라클에서 테이블생성시 생성되는 기본컬럼으로 
+			레코드 저장시 일련번호값이 저장됨. -->
+	</select>
+
+	<!-- 회원정보 수정 -->
+	<update id="updateProfile">
+		update MEMBER set
+		name = #{name},
+		password =
+		#{password},
+		email1 = #{email1},
+		email2 =
+		#{email2},
+		phone1 = #{phone1},
+		phone2 = #{phone2},
+		phone3 = #{phone3},
+		address1 = #{address1},
+		address2
+		= #{address2},
+		businessType =
+		#{businessType},
+		onerName = #{onerName},
+		businessLicense =
+		#{businessLicense},
+		companyName = #{companyName}
+		where
+		id = #{id}
+	</update>
+
+	<!-- 회원탈퇴 -->
+	<update id="withdraw">
+		update MEMBER set
+		activeStatus = '탈퇴'
+		where id = #{id}
+	</update>
+
+	<!-- 임시비밀번호로 변경 -->
+	<update id="updatePassword">
+		update MEMBER set
+		password = #{password}
+		where id =
+		#{id}
+	</update>
+
+	<!-- 검색전후 레코드개수 -->
+	<select id="getListCount" resultType="int">
+		select count(id) from
+		MEMBER
+	</select>
+
+	<!-- 결제(크레딧 수정) -->
+	<update id="updateCredit">
+		update MEMBER set credit=credit-#{fundingPrice} where id=#{id} 
+	</update>
+	
+	<!-- 크레딧 출금 -->
+	<update id="creditWithdraw" parameterType="CreditVO">
+		update MEMBER set credit=credit-#{credit} where id=#{id}
+	</update>
+	
+	<!-- 크레딧 충전 -->
+	<update id="creditCharge" parameterType="CreditVO">
+		update MEMBER set credit=credit+#{credit} where id=#{id}
+	</update>
+
+</mapper>
