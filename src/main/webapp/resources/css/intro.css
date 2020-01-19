@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+body { /*몸*/
+	background-color: #898989;
+	margin: 0; 					/*상하좌우 바깥여백을 0픽셀로 설정하면 바깥여백이 없어짐. */
+	padding: 0; 				/*상하좌우 안여백을 없앰*/
+	font-size: 0.75em; 			/*글자크기*/
+	line-height: 1.2em; 		/*수직간격*/
+	color: white;
+}
+
+#intro {
+	width: 100%; 				/*너비*/
+	text-align: center; 		/*글자 가운데정렬*/
+	height: 1900px; 			/*높이*/
+	margin: 0; 					/*마진을 0으로해서 바깥여백x*/
+	margin-left: auto; 			/*좌우를 auto로 설정해 가운데로 오게함*/
+	margin-right: auto;
+	background-color: white;	/*바탕색상:흰색*/
+	min-height: 1024px; 		/*최소높이*/
+	background-color: #f3f5f7;
+}
+
+#intro .intro1 {
+	width: 100%;
+	height: 656px;
+	border: 1px solid black;
+	padding: 0;
+	margin: 0px 0px 10px 0px;
+	background-color: gray;
+	font-size: 50px;
+	font-color: white;
+	line-height: 200px;
+}
+
+#intro .intro1 .intro1_img {
+	background-image: url(../../../resources/images/intro/demoon2.jpg);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+
+#intro .intro1 .intro1_img_h {
+	position: absolute;
+	top: 250px;
+	left: 500px;
+	font-family: Roboto, 'Noto Sans KR';
+	line-height: 56px;
+	font-size: 50px;
+	font-weight: 900;
+	display: block;
+	text-align: left;
+	color: white;
+}
+
+#intro .intro1 .intro1_img_p {
+	position: absolute;
+	top: 400px;
+	left: 500px;
+	line-height: 24px;
+	font-size: 20px;
+	font-weight: 900; margin-top : 16px;
+	word-break: keep-all;
+	display: block;
+	color: white;
+	margin-top: 16px
+}
+
+#intro .intro2 {
+	width: 1000px;
+	height: 560px;
+	padding: 120px 0px 120px 0px;
+	margin: 20px 451px 20px 451px;
+	background-color: #f3f5f7;
+	
+}
+
+#intro .intro2 .intro2_h {
+	line-height: 20px;
+	font-size: 15px;
+	font-weight: 400;
+	margin-bottom: 30px;
+	color: #00b2b2;
+	font-weight: 700;
+	text-align: left;
+}
+
+#intro .intro2 .intro2_t {
+	font-size: 32px;
+	float: left;
+	line-height: 1.5em;
+	display: inline;
+	margin-top: 17px;
+	color: black;
+}
+
+#intro .intro2 .intro2_r {
+	display: inline;
+	margin: 0px 0px 0px 100px;
+	line-height: 25px;		/*위치를 조정*/
+	
+	font-size: 17px;		/*폰트 글씨체 크기 17픽셀*/
+	float: right;			/*플로우 오른쪽배치*/
+	text-align: left;		/*텍스트 왼쪽정렬*/
+	color: black;			/*글씨체 컬러 검은색*/
+	font-weight: 900;		/*폰트 글씨 굵기를 최대로*/
+}
+
+#intro .intro2 .intro2_s {
+	position: absolute;
+	font-size: 17px;
+	margin-top: 34px;
+	color: #00b2b2;
+	font-weight: 900;
+	bottom: -400px;
+	left: 1090px;
+	line-height: 1.2em;
+}
+
+#intro .intro3 {
+	width: 100%;
+	height: 360px;
+	padding: 0;
+	margin: 0px 0px 10px 0px;
+	background-color: white;
+}
+
+#intro .intro3_p {
+	line-height: 30px;
+	font-size: 19px;
+	font-family: Roboto, 'Noto Sans KR';
+	font-weight: 900;
+	margin: 0 auto;
+	padding: 80px 0;
+	max-width: 1000px;
+	text-align: center;
+	color: black;
+}
+#intro .intro4 {
+	width: 100%;
+	height: 360px;
+	margin: 0;
+	padding:  0;
+	background-color:#f3f5f7;
+}	
+#intro .intro4_p {
+	line-height: 30px;
+	font-size: 19px;
+	font-family: Roboto, 'Noto Sans KR';
+	font-weight: 900;
+	margin: 0;
+	padding:  0;
+	
+	text-align: center;
+	color: black;
+}
+
+
+
+

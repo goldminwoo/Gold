@@ -1,0 +1,115 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+body {
+  padding-top: 200px;
+}
+.ha{
+	padding:200px 0 0 0;
+}
+
+.bbbb{
+	background-color:white;
+	border:0px;
+}
+.likecount{
+	width:30px; height: 30px; text-align: center;
+   border:none; background-color: pink; color:white; 
+   border-radius: 10px; 
+}
+.page1 .cen{
+   margin-left:400px;
+}
+
+.bbb{
+	display:block;
+}
+
+.t3 a{
+	margin-right:20px;
+	font-size:20px;
+	color:black;
+}
+
+.t3 a:hover{
+	text-decoration:none;
+	color:#8080ff;
+}
+
+.t3{
+	margin:0 auto;
+}
+
+button{
+	-webkit-transition:width 0.3s, height 0.3s, background-color 0.3s, -webkit-transform 0.3s;
+    transition:width 0.3s, height 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+.btn-2{
+	width:110px;
+	height:50px;
+	margin-top:20px;
+	margin-left:40px;
+	text-align:center;
+  line-height:20px;
+  font-size:18px;
+  background: white;
+  color: black;
+  border:0px;
+  border-bottom:2px solid black;
+  border-radius: 3px;
+} 
+
+.btn-2:hover{
+	  background: #2e0d9f;
+	  border:0px;
+	  color:white;
+}
+
+.btn-20{
+		margin-top:10px;
+	width:320px;
+	margin-right:70px;
+	height:50px;
+  background:#408080;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.4em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.btn-20:hover{
+  background:#fff;
+  color:#408080;
+}
+.btn-20:before,.btn-20:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background:#408080;
+  transition:400ms ease all;
+}
+.btn-20:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-20:hover:before,.btn-20:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
+
+

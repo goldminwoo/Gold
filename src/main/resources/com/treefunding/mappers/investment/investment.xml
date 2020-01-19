@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Investment">
+
+	<!-- 투자프로젝트 등록 -->
+	<insert id="insertInvestment">
+		insert into INVESTMENT
+		(id,investmentTotalProjectNo,projectName,name,
+		phone1, phone2, phone3, address1,
+		address2,
+		pay,businessNumber,companyName,searchTag,
+		cate,approved,testDatepicker1,testDatepicker2)
+		values(#{id},investment_Total_Project_no_se.nextval,#{projectName},#{name},
+		#{phone1}, #{phone2}, #{phone3}, #{address1}, #{address2},
+		#{pay},#{businessNumber},#{companyName},'dd',
+		'dd',0,#{testDatepicker1},#{testDatepicker2})
+	</insert>
+
+	<!-- 투자 프로젝트 상품 등록 -->
+	<insert id="insertInvestmentItem">
+		insert into INVESTMENT_ITEM
+		(id,investmentTotalProjectNo,productName,ea,soldEa,price,one,benefits)
+		values(#{id},#{investmentTotalProjectNo},#{productName},#{ea},0,#{price},#{one},#{benefits})
+	</insert>
+	
+		<!-- 메인이미지 등록 -->
+	<insert id="insertInvestmentMainImage">
+		insert into INVESTMENT_MAIN_IMAGE
+		(id,investmentTotalProjectNo,mainImageFile)
+		values(#{id},#{investmentTotalProjectNo},#{mainImageFile})
+	</insert>
+
+	<!-- 투자스토리 등록 -->
+	<insert id="insertInvestmentStory">
+		insert into INVESTMENT_STORY (id,investmentTotalProjectNo,storyCont)
+		values(#{id},#{investmentTotalProjectNo},#{storyCont})
+	</insert>
+
+	<!-- 투자문의사항 등록 -->
+	<insert id="insertInvestmentQuesion">
+		insert into INVESTMENT_QUESION
+		(id,investmentTotalProjectNo,queEmail,quePhone1,quePhone2,quePhone3,queUrl,queSns)
+		values(#{id},#{investmentTotalProjectNo},#{queEmail},#{quePhone1},#{quePhone2},#{quePhone3},#{queUrl},#{queSns})
+	</insert>
+
+	<!-- 투자프로젝트 등록 수 증가 -->
+	<update id="investmentNo">
+		update INVESTMENT SET projectNo=projectNo+1 where
+		investmentTotalProjectNo=#{no}
+	</update>
+
+	<!-- 아이디로 Investment 조회 -->
+	<select id="InvestmentSearch" resultType="InvestmentVO">
+		select * from INVESTMENT where id=#{id}
+	</select>
+
+	<select id="investmentTotalProjectNo" resultType="java.lang.Integer">
+		select * from (select investmentTotalProjectNo
+		from Investment order by investmentTotalProjectNo DESC) where ROWNUM=1
+	</select>
+
+	<!-- 전체 invesement 목록 조회 -->
+	<select id="getInvestmentList" resultType="InvestmentVO">
+		select * from
+		(select rowNum rNum, investmentTotalProjectNo,
+		id,name,projectName,approved,testDatepicker1
+		from (select * from
+		Investment
+		order by investmentTotalProjectNo))
+		where rNum &gt;= #{startRow} and
+		rNum &lt;=
+		#{endRow}
+		<!-- &gt;은 ~보다 크다(>),&lt;은 ~보다 작다(<),rowNum 컬럼은 오라클에서 테이블생성시 생성되는 기본컬럼으로 
+			레코드 저장시 일련번호값이 저장됨. -->
+	</select>
+
+	<!-- totalProjectNo로 Investment 검색 -->
+	<select id="getInvestment" resultType="InvestmentVO">
+		select * from
+		INVESTMENT
+		where
+		investmentTotalProjectNo=#{investmentTotalProjectNo}
+	</select>
+
+	<!-- INVESTMENTITEM 조회 -->
+	<select id="getInvestmentItem" resultType="InvestmentItemVO">
+		select * from
+		INVESTMENT_ITEM WHERE
+		investmentTotalProjectNo = #{investmentTotalProjectNo}
+	</select>
+	
+	<!-- INVESTMENTSTORY 조회 -->
+	<select id="getInvestmentStory" resultType="InvestmentStoryVO">
+		select * from
+		INVESTMENT_STORY WHERE
+		investmentTotalProjectNo = #{investmentTotalProjectNo}
+	</select>	
+
+	<!-- 검색전후 레코드개수 -->
+	<select id="getInvestmentListCount" resultType="int">
+		select
+		count(investmentTotalProjectNo) from INVESTMENT
+	</select>
+
+	<!-- 투자 승인 -->
+	<update id="updateInvestmentApproved">
+		update INVESTMENT SET approved=1 where
+		investmentTotalProjectNo = #{no}
+	</update>
+
+	<!-- approved 0 : 미심사 / 심사중 
+		approved 1 : 심사완료 / 진행중
+		approved 2 : 오픈 예정 현재날짜에서 오픈 날짜가 미달일시
+		approved 3 : 기간 만료 종료 날짜가 현재날짜보다 높으면 
+		approved 4 : 정지 프로젝트 프로젝트 정지 
+	-->
+
+	<!-- 투자 메인페이지 목록 -->
+	<select id="investmentMainPage" resultType="InvestmentVO">
+		select * from INVESTMENT where approved=1 order by investmentTotalProjectNo asc
+	</select>
+	
+	<!-- 투자 상품 목록 -->
+	<select id="investmentProduct" resultType="java.lang.String">
+		select B.productName from INVESTMENT a
+		INNER JOIN INVESTMENT_ITEM b ON a.investmentTotalProjectNo = b.investmentTotalProjectNo
+		AND a.approved=1 order by b.investmentTotalProjectNo asc
+	</select>
+
+	<!-- 투자 메인이미지 불러오기 -->
+	<select id="investmentMainImage" resultType="java.lang.String">
+		select B.mainImageFile from INVESTMENT a
+		INNER JOIN INVESTMENT_MAIN_IMAGE b ON a.investmentTotalProjectNo = b.investmentTotalProjectNo
+		AND a.approved=1 order by b.investmentTotalProjectNo asc
+	</select>
+	
+	<!-- 투자 펀딩하기 처리 -->
+	<insert id="insertFunding">
+		insert into MEMBER_INVESTMENT_FUNDING
+		(no,id,productName,fundingPrice,ea,options)
+		values(#{no},#{id},#{productName},#{fundingPrice},#{ea},#{options})
+	</insert>
+	
+	<!-- 회원별 투자 펀딩 수 -->
+	<select id="getInvestmentFundingEa" resultType="MemberInvestmentFundingVO">
+		select * from MEMBER_INVESTMENT_FUNDING where no=#{no}
+	</select>
+	
+	<!-- 투자 펀딩 개수 증가 -->
+	<update id="updateInvestmentSold">
+		update INVESTMENT_ITEM set soldEa=soldEa+#{ea},
+		ea=ea-#{ea} where investmentTotalProjectNo=#{no} 
+	</update>
+	
+	<!-- id로 투자 개수 찾기 -->
+	<select id="investmentIdCount" resultType="java.lang.Integer">
+		select count(*) FROM MEMBER_INVESTMENT_FUNDING where id=#{id}
+	</select>
+	
+	<!-- 번호값으로 투자 메인이미지 가져오기 -->
+	<select id="getInvestmentMainImage" resultType="java.lang.String">
+		select mainImageFile from INVESTMENT_MAIN_IMAGE where investmentTotalProjectNo=#{investmentTotalProjectNo}
+	</select>
+</mapper>

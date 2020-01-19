@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.header {
+   margin:0 auto;
+   padding:0 100px;
+   width:80%;
+   height:100%;
+   border-bottom:1px solid #e6eaed;
+}
+img{
+   width:265px;
+   heigth:62px;
+}
+ul li{
+   list-style-type:none;
+}
+ul {
+   margin:40px 0 0 0;
+   float:right;
+   
+}
+li{
+   float:left;
+   padding:0px 10px 0px 0px;
+   font-size:15px;
+}
+#h_login{
+   text-decoration:none;
+   color:#4c4c4c;
+   font-weight:normal;
+}
+#h_user{
+   text-decoration:none;
+   color:#4c4c4c;
+   font-weight:normal;
+}

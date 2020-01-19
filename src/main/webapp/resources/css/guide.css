@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+body{   /*몸*/
+   margin:0;               /*상하좌우 바깥여백을 0픽셀로 설정하면 바깥여백이 없어짐. */
+   padding:0;               /*상하좌우 안여백을 없앰*/             /*글자색*/
+   text-align:center;
+   background-color: black;
+   color:#fff;
+}
+
+#wrap{	/*서브몸*/
+    width:100%;					/*너비*/ 
+    text-align:center;			/*글자 가운데정렬*/
+    height:1300px;				/*높이*/
+    margin:0;					/*마진을 0으로해서 바깥여백x*/
+    background-color:white;		/*바탕색상:흰색*/
+    min-height:1024px;			/*최소높이*/	
+    background-color: #f3f5f7;
+}
+#wrap .guide1{	/*상단 대문*/
+	float:left;					/*왼쪽에 뜨게함*/
+	width:100%; 				/*너비를 #wrap에 100%로 함*/
+	height:250px;				/*높이를  200px로 지정*/
+	text-align:center;			/*텍스트 중앙 정렬*/
+	color:white; 				/*색상 흰색*/
+	background-color: #000000;	/**/
+	margin-left:auto; 			/*좌우를 auto로 설정해 가운데로 오게함*/
+	margin-right:auto;	
+	font:bold 40px New Roman; 	/*굵게 40픽셀 글씨종류:'뉴로맨'->자주 사용하는 글씨체*/
+	line-height: 130px;			/*라인위치를 지정하는 소스 130px로 맞춘다*/
+	
+	
+}
+#wrap .search12{	/*대문안에 검색창*/
+	width:900px; 
+	height:50px;
+	position: relative;
+    bottom:80px; 
+    font-size:25px;
+    left:80px;
+}
+#wrap .guide1_img{	/*대문안에 와디즈 메인으로 가는 링크 이미지*/	
+	position: relative;
+	width:147px; hegiht:23px;
+	float:right;
+	bottom:250px; right:500px;
+}
+#wrap .guide2{		/*가이드 메뉴1*/
+	border:1px solid black;
+   	border-radius:4px;
+	width:900px; 
+	height:150px;
+	background-color: white;
+	float:center;
+	margin-left:auto; 
+	margin-right:auto;
+	margin-bottom:25px;
+	margin-top:25px;
+}
+#wrap .guide2a {	/*가이드 메뉴1 첫쨰줄*/
+	color:black;
+	text-align:left;
+	font:bold 20px New Roman;
+	line-height:auto;
+	position: relative;
+    top:40px;
+    left:300px;
+}
+#wrap .guide2b {	/*가이드 메뉴1 둘째줄*/
+	color:black;
+	text-align:left;
+	font:bold 15px New Roman;
+	line-height:auto;
+	position: relative;
+	left:300px;
+}
+#wrap .guide2_img{	/*가이드 라인에 들어가는 아이콘*/
+	width:63px; 
+	height:63px;
+	background-image: url(../../../resources/images/guide/guide00.png);
+	position: relative;
+	float:center;
+	top:15px;
+	left:100px;
+}
+#wrap .guide3{
+	float:center;
+	border:1px solid black;
+   	border-radius:4px;/*테두리를 둥글게*/
+	width:900px; 
+	height:150px;
+	background-color: white;
+	margin-left:auto; 
+	margin-right:auto;/*div좌우 중앙정렬*/
+	margin-bottom:25px;
+	margin-top:25px;
+}
+#wrap .guide3a {
+	color:black;
+	text-align:left;
+	font:bold 20px New Roman;
+	line-height:auto;
+	position: relative;
+	top:40px;
+    left:300px;
+}
+#wrap .guide3b {
+	color:black;
+	text-align:left;
+	font:bold 15px New Roman;
+	line-height:auto;
+	position: relative;
+   	left:300px;
+}
+#wrap .guide3_img{
+	width:63px; 
+	height:63px;
+	background-image: url(../../../resources/images/guide/guide01.png);
+	position: relative;
+	float:center;
+	top:15px;
+	left:100px;
+}
+#wrap .guide4{
+	float:center;
+	border:1px solid black;
+   	border-radius:4px;/*테두리를 둥글게*/
+	width:900px; 
+	height:150px;
+	background-color: white;
+	margin-left:auto; 
+	margin-right:auto;/*div좌우 중앙정렬*/
+	margin-bottom:25px;
+	margin-top:25px;
+}
+#wrap .guide4a {
+	color:black;
+	text-align:left;
+	font:bold 20px New Roman;
+	line-height:auto;
+	position: relative;
+	top:40px;
+    left:300px;
+}
+#wrap .guide4b {
+	color:black;
+	text-align:left;
+	font:bold 15px New Roman;
+	line-height:auto;
+	position: relative;
+    left:300px;
+}
+#wrap .guide4_img{
+	width:63px; 
+	height:63px;
+	background-image: url(../../../resources/images/guide/guide02.png);
+	position: relative;
+	float:center;
+	top:15px;
+	left:100px;
+}
+#wrap .guide5{
+	float:center;
+	border:1px solid black;
+   	border-radius:4px;/*테두리를 둥글게*/
+	width:900px; 
+	height:150px;
+	background-color: white;
+	margin-left:auto; margin-right:auto;/*div좌우 중앙정렬*/
+	margin-bottom:25px;
+	margin-top:25px;
+}
+#wrap .guide5a {
+	color:black;
+	text-align:left;
+	font:bold 20px New Roman;
+	line-height:auto;
+	position: relative;
+	top:40px;
+    left:300px;
+}
+#wrap .guide5b {
+	color:black;
+	text-align:left;
+	font:bold 15px New Roman;
+	line-height:auto;
+	position: relative;
+    left:300px;
+}
+#wrap .guide5_img{
+	width:63px; 
+	height:63px;
+	background-image: url(../../../resources/images/guide/guide03.png);
+	position: relative;
+	float:center;
+	top:15px;
+	left:60px;
+}
+.aaaa{
+	text-decoration: none;/*하이퍼링크 된곳 밑줄선제거*/
+	color:#333;/*글자색지정*/
+}

@@ -1,0 +1,38 @@
+@charset "EUC-KR";
+
+#message{
+   width:60%;
+   height:100%;
+   height: 450px;
+   margin: 40px 0 0 100px;
+   padding:40px 0 0 180px;
+}
+#message p{
+   display: inline;
+}
+#get_message {
+   width:80%;
+   height:20%;
+   margin-top:10%;
+   height:150px;
+   background-color:#e4e4e4; 
+}
+#get_message ul{
+      list-style: none;
+}
+#get_message li{
+   display:block;
+
+}
+#get_message p{
+   display:block;
+}
+
+.cen{
+   text-align:center;
+   margin-top:30px;
+}
+
+
+
+

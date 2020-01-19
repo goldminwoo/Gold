@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* 전체 옵션 */
+a {
+   text-decoration: none;
+   color:#333;
+}
+
+* {
+   margin: 0 auto;
+   padding: 0;
+   font-family: 'Malgun gothic','Sans-Serif','Arial';
+}
+/* 게시판 목록 */
+#board_area {
+  width: 100%;
+  height:550px;
+  margin-top: 200px;
+}
+.tablehead{
+}
+.list-table th{
+   height:40px;
+   border-top:2px solid #09C;
+   border-bottom:1px solid #CCC;
+   font-weight: bold;
+   font-size: 17px;
+   text-align:center;
+}
+.list-table tbody td{
+   text-align:center;
+   padding:10px 0;
+   border-bottom:1px solid #CCC; height:20px;
+   font-size: 14px 
+}
+.list-table td{
+   text-align:center;
+   border-bottom:dotted 1px;
+}
+
+#page_control{
+	text-align:center
+}
+
+#page_control a{
+    padding:2px 18px;/*상하 안여백을 2픽셀,좌우 안여백을
+    5픽셀 동시지정*/
+    margin:0px 5px;/*상하 바깥여백 0픽셀,좌우 바깥여백
+    5픽셀 동시지정*/
+    text-decoration: none;/* 밑줄선 제거 */
+    color:#333;   
+}
+#page_control a:hover{/*하이퍼링크 된곳 마우스 오버시
+css 효과*/
+   text-decoration:underline;
+   font-weight:bold;/*글자 진하게*/
+   color:#F90;
+}
+.body1{
+   background-color:#FFFACD;
+   
+}
+.body2{
+   
+   text-align: left;
+   width:50%;
+   height:50%;
+   padding:10px 20px;
+   margin:0 auto;
+}
+.news1{
+   background-color:#FFFACD;
+   text-align: left;
+   width:50%;
+   height:50%;
+   padding:10px 20px;
+   
+}
+.btn12{
+   width:150px;
+   height:40px;
+    background-color: #30cbcf;
+    color:white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+#btn{
+   width:100px;
+   height:40px;
+    background-color: #30cbcf;
+    color:white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.imgs{
+   width:100%;
+   height:100%;
+   background-color:green;
+   padding:0 23%;
+
+}
+.img_1{
+   float:left;
+   width:30%;
+   height:40%;
+}
+.img_2{
+   float:left;
+   width:30%;
+   height:40%;
+
+}
+.img_3{
+   float:left;
+   width:30%;
+   height:40%;
+}
+.body{
+   width:50%;
+   height:50%;
+   backgroynd-color:red;
+}
+.list2{
+   float:left;
+}
+.list3{
+   float:left;
+}
+.header{
+   margin:0 auto;
+   padding:0px 100px;
+   width:80%;
+   height:100%;
+   background-color:blue;
+}
+.list-table ul {
+
+   padding:0px 10px 0px 0px;
+   list-style:none;
+   display:inline; 
+}
+.list-table li {
+	float:left;
+}
+.write table{
+   width:600px;
+   height:600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+.funding {
+	width: 100%;
+	height: auto;
+}
+
+.fundingMaindoor {
+	height: 162px;
+	margin: 45px 515px 0px 515px;
+	border: 1px solid white;
+}
+
+.investPick {
+	margin: 30px 0px 0px 300px;
+	width:100px;
+	height:100px;
+	border-radius:50px;
+	border: 1px solid #00c4c4;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+	background-color: #00c4c4;
+	color:white;
+	
+}
+
+.billingReservation {
+	margin: 30px 0px 0px 0px;
+	width:100px;
+	height:100px;
+	border-radius:50px;
+	border: 3px dotted gray;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+	background-color: white;
+	color:black;
+}
+.mid{
+	margin: 30px 0px 0px 0px;
+	width:100px;
+	height:100px;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+	
+}
+.fundingBody{
+	height: 1100px;
+	margin: 5px 515px 0px 515px;
+	border: 1px solid white;
+}
+.fundingGuide{
+	text-align: left;
+	width:100%;	
+}
+.fundingGuideLeft{
+	float:left;
+	font:'맑은고딕';
+	font-size: 20px;
+	margin:0;
+}
+.fundingGuideRight{
+	font:'맑은고딕';
+	font-size: 14px;
+	color:#ff000070;
+	margin:0;
+}
+.investBox{
+	margin-top:35px;
+	background-color:#f9f9f9;
+	width:100%;
+	height:206px;
+	border:1px solid white;
+}
+.investBoxTable{
+	margin-top:16px;
+}
+.investCheckBox{
+	width:100px;
+	height: 206px;
+	float: left;
+}
+.checkbox{
+	margin-left:40px;
+	margin-top:100px;
+}
+.checkbox2{
+	margin-left:40px;
+	margin-top:100px;
+}
+.checkbox3{
+	margin-left:40px;
+	margin-top:100px;
+}
+.fundingMoney{
+	font-size:20px;
+	padding-bottom: 5px;
+	}
+.component{
+	font-size:12px;
+	color:#9b9b9b;
+}
+.components{
+	font-size:12px;
+	color:#9b9b9b;
+	padding-bottom: 5px;
+}
+.investSpend{
+	font-size:12px;
+	color:#9b9b9b;
+}
+.goodsName{
+	font-size:15px;
+	padding-bottom: 5px;
+}
+.stock{
+	font-size:15px;
+	padding-bottom: 5px;
+}
+.fundingOption{
+	display: none;
+}
+.fundingOption2{
+	display: none;
+}
+.fundingOption3{
+	display: none;
+}
+.bt_up{
+	width:30px;
+	height: 30px;
+}
+.bt_down{
+	width:30px;
+	height: 30px;
+}
+
+.donation{
+	margin-top:80px;
+	background-color:white;
+	width:100%;
+	height:127px;
+	border:1px solid white;
+}
+.donationLeft{
+	width:200px;
+	float:left;
+}
+.donationFont{
+	font:'맑은 고딕';
+	font-size:16px;	
+}
+.donationRight{
+	width:660px;
+	border:1px solid white;
+	float:left;
+}
+.donationCont{
+	font:'맑은 고딕	';
+	font-size:14px;
+}
+.donationText{
+	text-align: right;
+	font-size:17px;
+	width:218px;
+	height:48px;
+	display: inline-block;	
+}
+.plusDonation{
+	float:right;
+	margin-top:12px;
+	margin-right: 260px;
+}
+.nextButton{
+	width: 100%;
+	
+}
+.nextBtn{
+	width: 180px;
+	height: 50px;
+	margin-left: 320px;
+	background-color: #00c4c4;
+    color: #fff;
+}

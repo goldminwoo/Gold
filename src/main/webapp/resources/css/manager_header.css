@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+*{
+	margin:0px;
+	padding:0px;
+	font-family:montserrat;
+	text-decoration:none;
+}
+
+#managerheader{
+	background-color:black;
+	padding:30px 0px;
+}
+
+#managerheader a{
+	color:white;
+	padding:0 30px;
+}
+
+.h-1{
+	display:inline;
+}
+
+.h-2{
+	float:right;
+}

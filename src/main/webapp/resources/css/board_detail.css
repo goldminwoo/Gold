@@ -1,0 +1,201 @@
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+#out { /*바디역할인거같음*/
+   text-align: center;
+   margin-top: 100px;
+   margin-bottom: 100px;
+   width: 100%;
+   height: 100%;
+}
+
+#in { /*out안에 크게 in,inReply가 있음*/
+   display: block;
+   border: 2px solid green;
+   width: 1000px;
+   height: 550px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#inReply {
+   padding-top: 30px;
+   margin-top: 30px;
+   padding-bottom: 50px;
+   display: block;
+   border: 1px solid white;
+   border-top: 2px dashed gray;
+   width: 1000px;
+   height: 300px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 1000px;
+   padding-bottom: 50px;
+}
+
+#replyDel {
+   float: right;
+   width: 20px;
+   height: 25px;
+   margin-right: 10px;
+   margin-bottom:15px;
+   cursor: pointer;
+   border-radius: 10px;
+   border:none;
+   background-color: white;
+   color:green;
+   font-weight: bold;
+}
+
+#title {
+   display: block;
+   padding: 10px;
+   border-bottom: 1px solid green;
+}
+
+#title p {
+   text-align: left;
+   float: left;
+   margin: 0 0 0 0;
+}
+
+#title em {
+   float: right;
+   font-size: small;
+}
+
+#title b {
+   text-align: center;
+}
+
+#date {
+   float: right;
+}
+
+#date p {
+   float: right:
+}
+
+#date a {
+   text-align: right;
+   font-size: small;
+   float: right;
+}
+
+#detail {
+   width: 100%;
+   height: 400px;
+   display: block;
+   font-size: large;
+   overflow: auto;
+}
+
+reply hr {
+   margin: 0 0 0 0;
+}
+
+#id {
+   border-bottom: 1px solid green;
+   padding: 13px 10px 7px 10px;
+   margin: 0;
+   float: left;
+   width: 100%;
+}
+
+#id p {
+   float: left;
+}
+
+#reply {
+   border: 1px solid green;
+   width: 100%;
+   height: 200px;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: #ffefdf;
+   overflow: auto;
+   padding-top: 10px;
+   margin-top: 10px;
+}
+.miniReply{
+   border-bottom:1px solid gray;
+   width: 100%;
+   height:70px;
+}
+
+#reply_id {
+   display: block;
+}
+
+#reply b {
+   float: left;
+   margin: 10px;
+}
+
+#reply p {
+   text-align: left;
+   padding: 0;
+   margin: 0;
+   margin-left: 10px;
+}
+
+#reply_id {
+   text-align: left;
+}
+
+#reply_detail {
+   text-align: left;
+}
+
+.replyId {
+   font-size: 15px;
+   font-weight: bold;
+   width:100px;
+   height:24px;
+   margin:10px;
+   padding:0;
+}
+
+.replyCont {
+   font-size: 20px;
+   font-weight: bold;
+   margin:0;
+   padding:10px;
+   width: 100%;
+}
+
+#content {
+   width: 900px;
+   text-align: center;
+}
+
+em {
+   font-style: normal;
+   font-weight: bold;
+}
+#buttons {
+   margin-top: 20px;
+   margin-right:auto;
+   margin-left:auto;
+   width: 500px;
+   height: 100px;
+}
+#boardList{float:left;margin-left:90px;border-radius: 10px; width:100px; height: 50px; border:none; font-size:20px; font-weight: bold;}
+#boardEdit{float:left;margin-left:10px;border-radius: 10px; width:100px; height: 50px; border:none; font-size:20px; font-weight: bold;}
+#boardDel{float:left; margin-left:10px;border-radius: 10px; width:100px; height: 50px; border:none; font-size:20px; font-weight: bold;}
+
+#boardList:hover{
+   background-color: green;
+   color:white;
+}
+#boardEdit:hover{
+   background-color: green;
+   color:white;
+}
+#boardDel:hover{
+   background-color: green;
+   color:white;
+}

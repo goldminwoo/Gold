@@ -1,0 +1,15 @@
+.container-fluid{
+	width: 400px;
+	margin: 0 auto;
+}
+.card-header{
+	background-color: black;
+}
+.card-footer{
+	backgrount-color: black;
+	color:white;
+}
+#theSearch{
+		background-color: black;
+		color:white;
+}

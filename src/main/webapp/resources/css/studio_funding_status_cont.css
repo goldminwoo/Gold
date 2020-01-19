@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+*{
+	padding:0;
+	margin:0;
+}
+.one-graph{
+	float: left;
+}
+.two-graph{
+	float: left;
+}
+.invest{
+	font-size: 30px;
+}
+.reward{
+	font-size: 30px;
+}
+.investment{
+	margin-top: 50px;
+	text-align: center;
+	
+	padding:0;	
+	float:left;
+}

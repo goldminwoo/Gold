@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#MakerStudio { /*전체적인 틀*/
+	margin: 100px 300px 0px 300px;
+	width: 1300px;
+	height: 1500px;
+}
+
+.fmslogo {
+	float: left;
+	margin: 70px 0px 0px 70px;
+	width: 814px;
+	height: 348px;
+	background-image: url(../images/mypage/fms.png);
+	background-repeat: no-repeat;
+}
+
+#msHead { /*msHead와 msBody 두부분으로 나눴음*/
+	width: 100%;
+	height: 600px;
+}
+
+#msBody { /*msBody 부분 */
+	width: 100%;
+	height: 750px;
+	
+	margin-top:10px;
+}
+
+.msHeadRigth1 { /*오른쪽 HOME 버튼 */
+	width: 100px;
+	height: 100px;
+	float: right;
+	background-color: rgba(0, 0, 0, 0);
+	color: #008040;
+	font-size: 15px;
+	font: '맑은고딕';
+	border: 1px solid #008040;
+	border-radius: 50px;
+}
+
+.msHeadRigth2 { /*오른쪽 MyPage 버튼 */
+	width: 100px;
+	height: 100px;
+	float: right;
+	margin-right: 20px;
+	background-color: rgba(0, 0, 0, 0);
+	color: #008040;
+	font-size: 15px;
+	font: '맑은고딕';
+	border: 1px solid #008040;
+	border-radius: 50px;
+}
+
+.msHeadRigth3 { /*오른쪽 새로 등록하기버튼 */
+	width: 200px;
+	height: 80px;
+	float: right;
+	margin-left: 200px;
+	margin-top: 400px;
+	background-color: rgba(0, 0, 0, 0);
+	color: #008040;
+	border: 1px solid #008040;
+	font-size: 20px;
+	font: '맑은고딕';
+}
+
+.FundList {
+	height: 750px;
+}
+/** msBody안에 들어가는 탭메뉴**/
+ul.tabs { /*전체보기, 투자, 리워드 */
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.tab-link {
+	width: 33%;
+	text-align: center;
+	font-size: 20px;
+	font: '맑은고딕';
+}
+
+ul.tabs li {
+	background: none;
+	color: #222;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+ul.tabs li.current {
+	background: #4c4c4c;
+	color: white;
+}
+
+.tab-content {
+	display: none;
+	background: #4c4c4c;
+	padding: 15px;
+	height: 620px;
+}
+
+.tab-content.current {
+	display: inherit;
+}
+
+.viewall {
+	border: 1px solid white;
+	width: 400px;
+	height: 550px;
+	float: left;
+	margin: 20px 0px 0px 15px;
+	background-color: white;
+}
+
+.projectimg {
+	width: 100%;
+	height: 240px;
+	
+}
+
+.projectboss {
+	width: 100%;
+	height: 230px;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+.projecttitle {
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	color:black;
+}
+
+.projectcont1 {
+	list-style: none;
+	font: '맑은 고딕';
+	font-size: 25px;
+	text-align: center;
+}
+.projectcont2{
+	list-style: none;
+	font: '맑은 고딕';
+	font-size: 20px;
+	text-align: center;
+}
+.projectcont3 {
+	margin-top: 30px;
+	margin-left:70px;
+	font: '맑은 고딕';
+	font-size: 20px;
+}
+.msBodybtn{
+	width: 80%;
+	height: 65px;
+	margin-left:40px;
+	margin-bottom:10px;
+	background-color: rgba(0, 0, 0, 0);
+	color: #008040;
+	font-size: 20px;
+	font: '맑은고딕';
+	border: 1px solid #008040;
+}

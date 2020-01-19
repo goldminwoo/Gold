@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+*{
+	margin:0px;
+	padding:0px;
+	font-family:montserrat;
+	text-decoration:none;
+}
+
+h1{
+	padding:20px 0px 40px 50px;
+	padding-left:50px;
+	float:left;
+}
+
+caption{
+	text-align:right;
+}
+
+table{
+	width:85%;
+	border-collapse:collapse;
+}
+
+th{
+	padding:15px;
+	background-color:#c0c0c0;
+}
+
+td{
+	padding:15px 0px;
+	border-top:0.2px solid gray;
+	border-bottom:0.2px solid gray;
+	text-align:center;
+}
+
+.page{
+	text-align:center;
+	margin:30px 0px;
+}
+
+.page button{
+	background-color:white;
+	border:0px;
+}
+
+.find{
+	text-align:center;
+}
+
+.find button{
+	padding:0px 10px;
+}
+

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.display1{ /*아이디.비번찾기*/
+   padding-top: 100px;
+   padding-bottom: 36px;
+   text-align: center;
+   margin: 0 auto;
+   font-size: 28px;
+   
+}
+.tab-list{ /*아이디.비번 링크*/
+   text-align: center;
+}
+a{
+   color: #4c4c4c;
+   text-decoration: none;
+   line-height: 48px;
+   font-size: 15px;
+   padding: 0 15px;
+}
+.page-body{
+   text-align: center;
+   background: #f5f7fa;
+   
+}
+.input-text{ /*이메일 입력창*/
+   height: 48px;
+   width: 400px;
+   font-size: 17px;
+   font-weight: 300;
+   line-height: 1.2em;
+   transition-duration: 0.2s, 0s;
+   border: 1px solid rgba(0, 0, 0, 0.15);
+   background: #fff;
+   padding: 0 0.94118em;
+   box-sizing: border-box;
+}
+
+
+#findId{
+   background-color: #4c4c4c;
+   color: #fff;
+   border-color: #4c4c4c;
+   display: inline-block;
+    padding-top: .07em;
+    text-decoration: none;
+    width:360px;
+   height: 48px;
+   margin: 30px;
+}
+
+
+

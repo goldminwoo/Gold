@@ -1,0 +1,38 @@
+@charset "EUC-KR";
+
+.table2{
+	text-align:center;
+}
+
+.t-1{
+	width:120px;
+	font-size:15px; 
+	line-height: 30px;
+	background: #4c4c4c;
+	color: #fff;
+	border-radius: 7px;
+}
+
+caption{
+	font-size:20px;
+}
+
+.t-2{
+	width:400px;
+	height:20px;
+}
+
+.cen1{
+	margin-top:50px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.pr{
+   margin-bottom:20px;
+   padding: 0 0 30px 20px;
+   text-align: center;
+   font-weight: bold;
+   font-size: 30px;
+   border-bottom: 1px solid #ddd;
+}

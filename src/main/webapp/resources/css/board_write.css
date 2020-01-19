@@ -1,0 +1,96 @@
+@charset "EUC-KR";
+
+/* 게시판 목록 */
+#board_area {
+    width: 900px;
+	margin-top: 80px;
+    position: relative;
+	margin-bottom: 30px;
+	border-left: 1px solid green;
+	border-right: 1px solid green;
+	padding:10px;
+}
+.write-table th{
+   height:40px;
+   font-weight: bold;
+   font-size: 17px;
+   text-align:center;
+}
+
+* {
+   margin: 0 auto;
+   padding: 0;
+   font-family: 'Malgun gothic','Sans-Serif','Arial';
+}
+#writeTitle{
+	border-radius: 5px;
+}
+.writeBtn{
+	height: 50px;
+	text-align: center;
+}
+#savebutton{margin-top:50px;border-radius: 10px; width:100px; height: 50px; border:none; font-size:20px; font-weight: bold;}
+#savebutton:hover{background-color: green;color:white;}
+
+#listbutton{margin-left:90px;border-radius: 10px; width:100px; height: 50px; border:none; font-size:20px; font-weight: bold;}
+#listbutton:hover{background-color: green;color:white;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

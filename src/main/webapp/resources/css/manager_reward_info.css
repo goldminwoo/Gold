@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+h1{
+	padding:20px 0px 40px 50px;
+	padding-left:50px;
+	float:left;
+}
+
+table{
+	margin-top:100px;
+	width:60%;
+	border-collapse:collapse;
+}
+
+caption{
+	float:left;
+}
+
+th{
+	width:20%;
+	margin-bottom:10px;
+	padding:15px;
+	border-top:0.2px solid gray;
+	border-bottom:0.2px solid gray;
+	border-right:0.2px solid gray;
+	background-color:#c0c0c0;
+}
+
+td{
+	padding:15px 0px;
+	border-top:0.2px solid gray;
+	border-bottom:0.2px solid gray;
+	text-align:center;
+}
+
+.m-1{
+	margin:50px 0px 20px 0px;
+}
+
+.g_bar{
+	display:inline-block;
+	position:relative;
+	height:20px;
+	border:1px solid #ccc;
+	border-left:0;
+	background:#00ff00;
+	float:left;
+	width:100%;
+}
+
+.g_bar span{
+	position:absolute;
+	top:0;right:-140px;
+	width:140px;
+	line-height:20px
+}
+	
+#rewardButton{
+	width:100pt;
+	height:50pt;
+}
+	
+	
+	
+	
+	

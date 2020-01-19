@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+*{
+	margin:0px;
+	padding:0px;
+	font-family:montserrat;
+	text-decoration:none;
+}
+
+#managerbody1{
+	padding:30px 0 0 20px;
+}
+
+.u-1{
+	padding:20px 0px;
+}
+
+.m-1{
+	margin-bottom:30px;
+}
+
+.p-1{
+	padding:20px 0 5px 10px;
+}
+
+.p-2{
+	padding:5px 0px 5px 20px;	
+}
+
+.p-1 a:link{
+	color:black;
+}
+
+.p-1 a:visited{
+	color:black;
+}
+
+.p-1 a:hover{
+	color:#31b73f;
+}
+
+.p-2 a:link{
+	color:blue;
+}
+
+.p-2 a:visited{
+	color:blue;
+}
+
+.p-2 a:hover{
+	color:#31b73f;
+}
+
+hr{
+	color:#3498db;
+}
+
+#managerbody1 ul{
+	list-style:none;
+}
+
+#managerbody1{
+	background-color:white;
+	width:13%;
+	height:2000px;
+	float:left;
+	border-right:0.2px solid gray;
+}

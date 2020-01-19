@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+h1{
+	padding:20px 0px 40px 50px;
+	padding-left:50px;
+	float:left;
+}
+
+.mainTable{
+	margin-top:100px;
+	width:80%;
+	border-collapse:collapse;
+}
+
+.mainTh{
+	width:20%;
+	margin-bottom:10px;
+	padding:15px;
+	border-top:0.2px solid gray;
+	border-bottom:0.2px solid gray;
+	border-right:0.2px solid gray;
+	background-color:#c0c0c0;
+}
+
+.mainTd{
+	padding:15px 0px;
+	border-top:0.2px solid gray;
+	border-bottom:0.2px solid gray;
+	text-align:center;
+}
+
+.blockContainer{
+	margin-left:auto;
+	margin-right:auto;
+	width:30%;	
+}
+	
+.btn{
+	width: 150px;
+	height: 80px;
+	
+}
