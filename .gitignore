@@ -4,3 +4,7 @@
 /classes/
 /test-classes/
 .classpath
+.springBeans
+/target/
+/.settings/
+.project
